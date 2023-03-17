@@ -10,12 +10,12 @@ def get_dico(name, carbon_intensity_1, carbon_intensity_2, objectives):
 
 	return dico
 
-ipsen = get_dico('IPSEN', 79.6, 44.2, -0.06)
-lvmh = get_dico('LVMH', 8.58, 4.74, -0.5)
+ipsen = get_dico('IPSEN', 5.24, 2.64, -0.04)
+lvmh = get_dico('LVMH', 8.58, 4.74, -0.1)
 schneider = get_dico('Schneider Electric', 7.69, 4.12, -0.06)
 adp = get_dico('Aéroports de Paris', 19.6, 13.36, -0.06)
-bouygues = get_dico('Bouygues Construction', 79.6, 44.2, -0.06)
-pernod_ricard = get_dico('Pernod Ricard', 28, 21, -0.06)
+bouygues = get_dico('Bouygues Construction', 10.04, 6.32, -0.06)
+pernod_ricard = get_dico('Pernod Ricard', 10.27, 6.34, -0.06)
 
 class Company_Analyse():
 	#Le scope doit être en tonne de CO2 équivalent par millions de chiffre d'affaire
@@ -119,7 +119,7 @@ class Portefeuille_extra():
 		print(df['Fund pathway'])
 		df = df['Fund pathway']
 		fig = px.line(df, x=df.index, y=df,
-		              title='Fund decarbonization pathway')
+		              title='Green 9 Capital net-zero fund decarbonization pathway')
 		fig.update_xaxes(
 			dtick="M1",
 			tickformat="%b\n%Y",
